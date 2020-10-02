@@ -1,0 +1,49 @@
+<div class="container-fluid">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Let's Eat: Restaurant Reviews</h1>
+            <p class="lead">Review all of your favorite restaurants. Let's bring family and friends together to eat at the best places in town!</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="card text-center" *ngFor="let restaurant of restaurants">
+        <div class="card-header">
+            Cuisine: {{restaurant.cuisine}}
+            <div class="btn-group">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="['edit', restaurant._id]">Update</a>
+                    <a class="dropdown-item" (click)="deleteRestaurantsFromService(restaurant._id)">Delete</a>
+                </div>
+            </div>
+        <div class="card-body">
+            <h5 class="card-title">{{restaurant.name}}</h5>
+            <button class="btn btn-primary" [routerLink]="['reviews', restaurant._id]">Leave a Review</button>
+        </div>
+        <div class="card-footer text-muted">
+        </div>
+    </div>
+</div> -->
+<button class="btn btn-light" [routerLink]="['new']"> + New Restaurant</button>
+<div class="card card-mg-3" *ngFor="let restaurant of restaurants">
+    <h5 class="card-header">Cuisine: {{restaurant.cuisine}}</h5>
+    <div class="card-body">
+        <h3 class="card-title">{{restaurant.name}}
+            <div class="btn-group">
+                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="['edit', restaurant._id]">Update</a>
+                    <a class="dropdown-item" (click)="deleteRestaurantsFromService(restaurant._id)">Delete</a>
+                </div>
+            </div>
+
+        </h3>
+        <p class="card-text">Please leave a review and let everyone know why you love us. Let's eat!</p>
+        <button class="btn btn-danger" [routerLink]="['reviews', restaurant._id]">Leave a Review</button>
+    </div>
+  </div>
+
+

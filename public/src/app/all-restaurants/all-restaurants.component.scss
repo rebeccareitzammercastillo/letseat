@@ -1,0 +1,30 @@
+.jumbotron{
+    background-image: url("/public/src/assets/images/kitchenmd.jpg");
+    background-color: maroon;
+    .container{
+    border: 4px solid white;
+    color: white;
+    text-align: center;
+    }
+}
+.card-title{
+    color:maroon;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: maroon;
+    border-color: maroon;
+}
+
+.btn-light{
+    color: gray;
+}
+
+.dropdown-item{
+    color: gray;
+}
+
+.card-header{
+    color: grey;
+}

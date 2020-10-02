@@ -1,0 +1,39 @@
+<!-- <p>Edit a Restaurant:</p>
+<ul *ngIf="errors">
+    <li *ngFor="let error of errors" style="color:red;">
+        {{error}}
+    </li>
+</ul>
+<form *ngIf="oneRestaurant" (submit)="editRestaurantsFromService(restaurant)">
+    <div class="form-group">
+        <!-- <p> {{ newTask | json }} </p> -->
+        <!-- <label for="exampleInputEmail1">Restaurant Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" [(ngModel)]="oneRestaurant.name" > 
+        <label for="exampleInputEmail1">Cuisine Type</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="cuisine" [(ngModel)]="oneRestaurant.cuisine"> 
+    </div>
+    <a href="/" class="btn btn-info">Cancel</a>
+    <button type="submit" class="btn btn-info">Edit</button>
+</form> -->
+
+<div class="row justify-content-center">
+    <div class="col-4">
+        <h2 class="edit">Update {{oneRestaurant.name}}:</h2>
+        <ul *ngIf="errors">
+            <li *ngFor="let error of errors" style="color:red;">
+                {{error}}
+            </li>
+        </ul>
+        <form *ngIf="oneRestaurant" (submit)="editRestaurantsFromService(restaurant)">
+            <div class="form-group">
+                <!-- <p> {{ newTask | json }} </p> -->
+                <label for="exampleInputEmail1">Restaurant Name</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="name" [(ngModel)]="oneRestaurant.name" > 
+                <label for="exampleInputEmail1">Cuisine Type</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="cuisine" [(ngModel)]="oneRestaurant.cuisine"> 
+            </div>
+            <button type="submit" class="btn btn-info">Update</button>
+            <a href="/" class="btn btn-link">Cancel</a>
+        </form>
+    </div>
+</div>

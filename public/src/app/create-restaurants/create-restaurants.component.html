@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+    <div class="col-4">
+        <h2 class="new">Add a New Restaurant:</h2>
+        <ul *ngIf="errors">
+            <li *ngFor="let error of errors" style="color:red;">
+                {{error}}
+            </li>
+        </ul>
+        <form (submit)="createRestaurantsFromService()">
+            <div class="form-group">
+                <!-- <p> {{ newTask | json }} </p> -->
+                <!-- {{ name.errors | json}} {{name.valid | json}} -->
+                <label for="exampleInputEmail1">Restaurant Name</label> 
+                <!-- <div *ngIf="name.errors">At least 3 characters</div> <div *ngIf="!name.valid">*Required</div> 
+                required
+                minlength="3"
+                #name = "ngModel"
+                -->
+                <input type="text" class="form-control" id="exampleInputEmail1" name="name" [(ngModel)]="newRestaurant.name"  placeholder="Name">
+                <label for="exampleInputEmail1">Cuisine Type</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" name="cuisine" [(ngModel)]="newRestaurant.cuisine"  placeholder="Cuisine"> 
+            </div>
+            <button type="submit" class="btn btn-info">Add</button>
+            <a href="/" class="btn btn-link">Cancel</a>
+        </form>
+    </div>
+</div>
