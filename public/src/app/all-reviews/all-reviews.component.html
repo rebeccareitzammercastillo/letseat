@@ -1,18 +1,13 @@
-<button [routerLink]="['/create', oneRestaurant._id]"  > + New Review</button>
+<div class="row justify-content-center">
+    <div class="col-8">
+        <h2>{{oneRestaurant.name}} Reviews</h2>
+        <button [routerLink]="['/create', oneRestaurant._id]" class="btn btn-light"> + Write a Review</button>
+        <div class="card" *ngFor="let review of oneRestaurant.reviews">
+            <h5 class="card-header">{{review.cname}} - {{review.stars}} Stars</h5>
+            <div class="card-body">
+                <p class="card-text">{{review.review}}</p>
+            </div>
+        </div>
 
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">Customers</th>
-            <th scope="col">Stars</th>
-            <th scope="col">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let review of oneRestaurant.reviews">
-            <td>{{review.cname}}</td>
-            <td>{{review.stars}}</td>
-            <td>{{review.review}}</td>
-        </tr>
-    </tbody>
-</table>
+    </div>
+</div>
